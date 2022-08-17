@@ -19,7 +19,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session())
 
-mongoose.connect("mongodb+srv://admin-tayo:highzick@cluster0.hsis8td.mongodb.net/?retryWrites=true&w=majority/fashionDB")
+mongoose.connect("mongodb+srv://admin-tayo:highzick@cluster0.hsis8td.mongodb.net/fashionDB")
 
 const orderSchema = new mongoose.Schema({
 
@@ -104,7 +104,7 @@ app.post("/user-signup", function (req, res) {
     User.register({ firstname: req.body.firstName, lastname: req.body.lastName, username: req.body.username, phonenumber: req.body.telephone }, req.body.password, function (err, user) {
         if (err) {
             console.log(err);
-            res.render("Error: email already exits, try another");
+
         }
         else {
             passport.authenticate("local")(req, res, function () {
