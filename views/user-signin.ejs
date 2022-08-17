@@ -1,0 +1,47 @@
+<%- include('partials/header') %>
+    <div class="container py-4 py-lg-5 my-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card border-0 shadow">
+                    <div class="card-body">
+                        <!-- <h2 class="h4 mb-1">Sign in</h2> -->
+                        <div class="col-lg-12">
+                            <img class="signup-jpg" src="img/sign-in.png" alt="signup-jpg">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 pt-4 mt-3 mt-md-0 signup">
+                        <h2 class="h4 mb-3">Welcome!🎈 Sign in</h2>
+                        <p class="fs-sm text-muted mb-4">Registration takes less than a minute but gives you full
+                            control
+                            over your orders.</p>
+                        <form action="/user-signin" method="post">
+                            <div class="mb-3">
+                                <label class="form-label" for="si-email">Email address</label>
+                                <input class="form-control" type="email" name="username"
+                                    placeholder="satoshi@example.com" required>
+                                <div class="invalid-feedback">Please provide a valid email address.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="si-password">Password</label>
+                                <div class="password-toggle">
+                                    <input class="form-control" type="password" name="password" required>
+                                    <label class="password-toggle-btn" aria-label="Show/hide password">
+                                        <input class="password-toggle-check" type="checkbox"><span
+                                            class="password-toggle-indicator"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3 d-flex flex-wrap justify-content-between">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="si-remember">
+                                    <label class="form-check-label" for="si-remember">Remember me</label>
+                                </div><a class="fs-sm" href="/user-signup">Sign up</a>
+                            </div>
+                            <button class="btn btn-primary btn-shadow d-block w-100" type="submit">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </main>
+            <%- include('partials/footer')%>
