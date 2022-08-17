@@ -150,6 +150,6 @@ app.post("/shop-grid-ft", function (req, res) {
 })
 
 
-app.listen("3000", function () {
-    console.log("server is running on port 3000")
+app.listen(process.env.PORT || 3000, function () {
+    console.log("server has started successfully")
 })

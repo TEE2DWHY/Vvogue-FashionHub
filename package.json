@@ -12,6 +12,9 @@
   ],
   "author": "tayo olorunfemi",
   "license": "ISC",
+  "engines": {
+    "node": "16.14.0"
+  },
   "dependencies": {
     "alert": "^5.1.1",
     "bcrypt": "^5.0.1",
