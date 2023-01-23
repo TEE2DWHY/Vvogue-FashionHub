@@ -19,14 +19,10 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session())
 
-mongoose.connect("mongodb+srv://admin-tayo:highzick@cluster0.hsis8td.mongodb.net/fashionDB")
+mongoose.connect("mongodb://localhost:27017/fashionDB")
 
 const orderSchema = new mongoose.Schema({
-
-    amount: String,
-    size: String,
-    order_id: String,
-    productname: String,
+    order: Array
 })
 
 orderSchema.plugin(paspportLocalMongoose)
